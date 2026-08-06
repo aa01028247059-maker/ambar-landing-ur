@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Амбар для&nbsp;бизнеса — складское хранение и&nbsp;учёт товаров</title>
+  <meta name="description"
+    content="Складское хранение и учёт товаров для юридических лиц. Приём груза, присвоение ГРМ, учёт остатков в личном кабинете, отгрузки по FBO и на Амбар Маркет.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ======= MODAL: ЗАЯВКА ДЛЯ БИЗНЕСА ======= -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal">
+      <button class="modal__close" id="modalClose" aria-label="Закрыть">
+        <img src="assets/svg/icons/icon-cross.svg" alt="" width="20" height="20">
+      </button>
+      <h3 class="modal__title" id="modalTitle">Оставить заявку для&nbsp;бизнеса</h3>
+      <p class="modal__subtitle">Оставьте свои контакты и&nbsp;наш менеджер свяжется с&nbsp;вами в&nbsp;течение
+        15&nbsp;минут</p>
+      <form class="consult-form" id="modalForm" novalidate>
+        <div class="form__field">
+          <input type="text" name="name" id="modalName" placeholder="Ваше имя" autocomplete="name" required>
+        </div>
+        <div class="form__field">
+          <input type="tel" name="phone" id="modalPhone" placeholder="Номер телефона" autocomplete="tel" required>
+        </div>
+        <label class="form__checkbox">
+          <input type="checkbox" name="consent1" required>
+          <span>Соглашаюсь с&nbsp;обработкой своих персональных данных</span>
+        </label>
+        <label class="form__checkbox">
+          <input type="checkbox" name="consent2" required>
+          <span>Принимаю <a href="https://ambar-sklad.ru/privacy-policy/" target="_blank" rel="noopener"
+              class="form__link">политику обработки персональных данных</a></span>
+        </label>
+        <button type="submit" class="btn btn--primary btn--lg form__submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======= HEADER ======= -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="header__logo">
+        <img src="assets/svg/logo/logo-brand-red.svg" alt="Амбар" height="36">
+      </a>
+      <nav class="header__nav" id="mainNav">
+        <a href="#process">Как&nbsp;это&nbsp;работает</a>
+        <a href="#cabinet">Личный кабинет</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacts">Контакты</a>
+        <button class="btn btn--primary header__nav-cta" id="openConsultHeaderMobile">Оставить заявку</button>
+      </nav>
+      <button class="btn btn--primary header__cta" id="openConsultHeader">Оставить заявку</button>
+      <button class="header__burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ======= HERO ======= -->
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <div class="hero__badge">
+            <img src="assets/svg/icons/icon-location.svg" alt="" width="16" height="16" aria-hidden="true">
+            Москва и&nbsp;Московская область
+          </div>
+          <h1 class="hero__title">Складское хранение<br>и&nbsp;учёт товаров для&nbsp;бизнеса</h1>
+          <p class="hero__subtitle">Принимаем груз, присваиваем каждой позиции ГРМ, ведём остатки
+            в&nbsp;штуках<br>и&nbsp;позволяем
+            формировать заказы удалённо — из&nbsp;любой точки мира</p>
+          <div class="hero__visual hero__visual--inline" aria-hidden="true">
+            <img src="assets/images/photo-hero1.jpg" alt="" class="hero__photo hero__photo--1" loading="lazy">
+            <img src="assets/images/photo-hero2.jpg" alt="" class="hero__photo hero__photo--2" loading="lazy">
+            <img src="assets/images/photo-hero3.jpg" alt="" class="hero__photo hero__photo--3" loading="lazy">
+          </div>
+          <div class="hero__actions">
+            <button class="btn btn--primary btn--lg" id="openConsultHero">Оставить заявку на&nbsp;хранение</button>
+            <a href="#pricing" class="btn btn--secondary btn--lg">Смотреть тарифы для&nbsp;бизнеса</a>
+          </div>
+        </div>
+        <div class="hero__visual" id="heroVisual" aria-hidden="true">
+          <img src="assets/images/photo-hero1.jpg" alt="" class="hero__photo hero__photo--1" loading="lazy">
+          <img src="assets/images/photo-hero2.jpg" alt="" class="hero__photo hero__photo--2" loading="lazy">
+          <img src="assets/images/photo-hero3.jpg" alt="" class="hero__photo hero__photo--3" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= STATS ======= -->
+    <section class="stats" id="stats">
+      <div class="container stats__inner">
+        <div class="stats__item reveal">
+          <span class="stats__number">15+</span>
+          <span class="stats__label">лет на&nbsp;рынке</span>
+        </div>
+        <div class="stats__divider"></div>
+        <div class="stats__item reveal">
+          <span class="stats__number">34&nbsp;000 м³</span>
+          <span class="stats__label">тёплого склада</span>
+        </div>
+        <div class="stats__divider"></div>
+        <div class="stats__item reveal">
+          <span class="stats__number">24 ч</span>
+          <span class="stats__label">срок возврата вещей</span>
+        </div>
+        <div class="stats__divider"></div>
+        <div class="stats__item reveal">
+          <span class="stats__number">1000+</span>
+          <span class="stats__label">довольных клиентов</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= ПРОБЛЕМЫ ПРЕДПРИНИМАТЕЛЯ ======= -->
+    <section class="pain" id="pain">
+      <div class="pain__bg" aria-hidden="true">
+        <img src="assets/images/photo-problems1.png" alt="" class="pain__bg-img">
+        <div class="pain__overlay"></div>
+      </div>
+      <div class="container pain__container">
+        <div class="pain__header">
+          <div class="pain__title-wrap">
+            <h2 class="pain__title">Знакомые проблемы предпринимателя?</h2>
+          </div>
+        </div>
+        <div class="pain__body">
+          <div class="pain__list">
+            <div class="pain__item reveal">
+              <img src="assets/svg/icons/icon-question-circle.svg" alt="" class="pain__icon" aria-hidden="true">
+              <p>Товар занимает офис, магазин или&nbsp;квартиру, а&nbsp;работать с&nbsp;ним неудобно</p>
+            </div>
+            <div class="pain__item reveal">
+              <img src="assets/svg/icons/icon-question-circle.svg" alt="" class="pain__icon" aria-hidden="true">
+              <p>Нет точного учёта: сколько единиц осталось, что&nbsp;и&nbsp;где лежит</p>
+            </div>
+            <div class="pain__item reveal">
+              <img src="assets/svg/icons/icon-question-circle.svg" alt="" class="pain__icon" aria-hidden="true">
+              <p>Нельзя оформить отправку клиенту, находясь не&nbsp;на&nbsp;складе</p>
+            </div>
+            <div class="pain__item reveal">
+              <img src="assets/svg/icons/icon-question-circle.svg" alt="" class="pain__icon" aria-hidden="true">
+              <p>Сложно быстро собрать поставку на&nbsp;маркетплейс без&nbsp;ручного пересчёта</p>
+            </div>
+            <div class="pain__item reveal">
+              <img src="assets/svg/icons/icon-question-circle.svg" alt="" class="pain__icon" aria-hidden="true">
+              <p>Хранение «для&nbsp;себя» не&nbsp;даёт возможности продавать товар онлайн</p>
+            </div>
+          </div>
+          <div class="pain__visual reveal">
+            <img src="assets/images/photo-problems2.png" alt="" class="pain__photo" loading="lazy">
+            <div class="pain__card">
+              <img src="assets/svg/logo/logo-white-mini.svg" alt="" class="pain__card-logo" aria-hidden="true">
+              <p class="pain__card-text">Амбар решает это&nbsp;одним сервисом: хранение + учёт + управление заказами в&nbsp;личном
+                кабинете</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= КАК МЫ ПРИНИМАЕМ ГРУЗ ======= -->
+    <section class="process section section--light" id="process">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Как&nbsp;работает приёмка и&nbsp;учёт товара</h2>
+        </div>
+        <div class="process__grid">
+          <div class="process__item reveal">
+            <div class="process__num">1</div>
+            <div class="process__content">
+              <h3 class="process__title">Привозим или&nbsp;принимаем ваш груз</h3>
+              <p class="process__text">Вы отправляете товар на&nbsp;склад самостоятельно или&nbsp;заказываете вывоз</p>
+            </div>
+          </div>
+          <div class="process__item reveal">
+            <div class="process__num">2</div>
+            <div class="process__content">
+              <h3 class="process__title">Замеряем габариты и&nbsp;вес</h3>
+              <p class="process__text">Каждая позиция проходит замер: длина, ширина, высота, вес</p>
+            </div>
+          </div>
+          <div class="process__item reveal">
+            <div class="process__num">3</div>
+            <div class="process__content">
+              <h3 class="process__title">Присваиваем ГРМ (габаритно-размерный код учёта)</h3>
+              <p class="process__text">Каждому товару или&nbsp;партии присваивается уникальный код ГРМ, который
+                фиксирует его параметры и&nbsp;место на&nbsp;складе</p>
+            </div>
+          </div>
+          <div class="process__item reveal">
+            <div class="process__num">4</div>
+            <div class="process__content">
+              <h3 class="process__title">Создаём карточку товара</h3>
+              <p class="process__text">На&nbsp;основе ГРМ формируется карточка товара с&nbsp;количественным показателем
+                в&nbsp;штуках</p>
+            </div>
+          </div>
+          <div class="process__item reveal">
+            <div class="process__num">5</div>
+            <div class="process__content">
+              <h3 class="process__title">Присваиваем артикул</h3>
+              <p class="process__text">При&nbsp;необходимости к&nbsp;товару привязывается ваш собственный артикул, который
+                используется в&nbsp;вашей системе учёта и&nbsp;продаж</p>
+            </div>
+          </div>
+          <div class="process__item reveal">
+            <div class="process__num">6</div>
+            <div class="process__content">
+              <h3 class="process__title">Товар отображается в&nbsp;личном кабинете</h3>
+              <p class="process__text">Вы видите остатки, карточки товаров и&nbsp;количество единиц по&nbsp;каждому ГРМ
+                или&nbsp;артикулу онлайн</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= ЛИЧНЫЙ КАБИНЕТ ПРЕДПРИНИМАТЕЛЯ ======= -->
+    <section class="lk-promo section" id="cabinet">
+      <div class="container">
+        <div class="lk-promo__inner">
+          <div class="lk-promo__content">
+            <h2 class="lk-promo__title">Управляйте товаром<br>из&nbsp;любой точки мира</h2>
+            <ul class="lk-promo__list">
+              <li class="lk-promo__item reveal">
+                <img src="assets/svg/icons/icon-point.svg" alt="" aria-hidden="true" class="lk-promo__icon">
+                <p class="lk-promo__text">Видите карточки товаров с&nbsp;остатками в&nbsp;штуках по&nbsp;каждому ГРМ и&nbsp;артикулу</p>
+              </li>
+              <li class="lk-promo__item reveal">
+                <img src="assets/svg/icons/icon-point.svg" alt="" aria-hidden="true" class="lk-promo__icon">
+                <p class="lk-promo__text">Отслеживаете, сколько единиц товара хранится на&nbsp;складе прямо сейчас</p>
+              </li>
+              <li class="lk-promo__item reveal">
+                <img src="assets/svg/icons/icon-point.svg" alt="" aria-hidden="true" class="lk-promo__icon">
+                <p class="lk-promo__text">Выбираете одну или&nbsp;несколько карточек товара для&nbsp;формирования заказа</p>
+              </li>
+              <li class="lk-promo__item reveal">
+                <img src="assets/svg/icons/icon-point.svg" alt="" aria-hidden="true" class="lk-promo__icon">
+                <p class="lk-promo__text">Собираете из&nbsp;нескольких позиций один заказ на&nbsp;отправку</p>
+              </li>
+              <li class="lk-promo__item reveal">
+                <img src="assets/svg/icons/icon-point.svg" alt="" aria-hidden="true" class="lk-promo__icon">
+                <p class="lk-promo__text">Отправляете заявку на&nbsp;склад — мы подбираем нужное количество товара
+                  по&nbsp;указанным ГРМ или&nbsp;артикулам</p>
+              </li>
+              <li class="lk-promo__item reveal">
+                <img src="assets/svg/icons/icon-point.svg" alt="" aria-hidden="true" class="lk-promo__icon">
+                <p class="lk-promo__text">Управляете расходами и&nbsp;оплатой хранения онлайн</p>
+              </li>
+            </ul>
+            <div class="section__note reveal">
+              Вы формируете заказ — склад комплектует и&nbsp;отправляет
+            </div>
+            <img src="assets/images/photo-lk.png" alt="Личный кабинет Амбар для бизнеса"
+              class="lk-promo__img lk-promo__img--mobile" loading="lazy">
+            <a href="https://newlk.ambar-sklad.ru/login" class="btn btn--primary" target="_blank" rel="noopener">Перейти
+              в&nbsp;личный кабинет</a>
+          </div>
+          <div class="lk-promo__image">
+            <img src="assets/images/photo-lk.png" alt="Личный кабинет Амбар для бизнеса" class="lk-promo__img"
+              loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= ОТ ХРАНЕНИЯ К ПРОДАЖАМ ======= -->
+    <section class="sales section section--light" id="sales">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Ваш товар может не&nbsp;просто храниться, а&nbsp;продаваться</h2>
+          <p class="section__subtitle">Пока&nbsp;товар лежит на&nbsp;складе, он может работать на&nbsp;вас. С&nbsp;Амбаром у&nbsp;вас
+            есть возможность превратить складские остатки в&nbsp;дополнительный канал продаж:</p>
+        </div>
+        <div class="sales__grid">
+          <div class="sales__card reveal">
+            <div class="sales__card-header">
+              <div class="sales__icon sales__icon--primary">
+                <img src="assets/svg/logo/logo-white-mini.svg" alt="" width="40" height="40">
+              </div>
+              <h3 class="sales__title">Через&nbsp;Амбар Маркет</h3>
+            </div>
+            <p class="sales__text">Реализуйте товар через&nbsp;собственный маркетплейс Амбара, без&nbsp;необходимости
+              организовывать отдельную логистику продаж</p>
+          </div>
+          <div class="sales__card reveal">
+            <div class="sales__card-header">
+              <div class="sales__icon sales__icon--secondary">
+                <img src="assets/svg/icons/icon-fbo.svg" alt="" width="40" height="40">
+              </div>
+              <h3 class="sales__title">По&nbsp;схеме FBO</h3>
+            </div>
+            <p class="sales__text">Собираем грузы по&nbsp;вашим карточкам и&nbsp;формируем поставки для&nbsp;крупных
+              маркетплейсов: Wildberries, Ozon, Яндекс Маркет, Купер, СберМаркет</p>
+          </div>
+          <div class="sales__card reveal">
+            <div class="sales__card-header">
+              <div class="sales__icon sales__icon--outline">
+                <img src="assets/svg/icons/icon-note.svg" alt="" width="40" height="40">
+              </div>
+              <h3 class="sales__title">Из&nbsp;тех же&nbsp;карточек товара</h3>
+            </div>
+            <p class="sales__text">Никакого дублирования учёта: одна карточка, один остаток, разные каналы
+              продаж</p>
+          </div>
+        </div>
+        <div class="section__note section__note--gap-lg reveal">
+          Вы храните товар у&nbsp;нас — мы помогаем вам его продавать
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= КОМУ ПОДХОДИТ УСЛУГА ======= -->
+    <section class="segments section" id="segments">
+      <div class="container">
+        <div class="section__header section__header--left">
+          <h2 class="section__title">Для&nbsp;кого эта&nbsp;услуга</h2>
+        </div>
+        <div class="segments__inner">
+          <div class="segments__list">
+            <div class="segments__point reveal">
+              <div class="segments__point-header">
+                <img src="assets/svg/icons/icon-success-circle.svg" alt="" class="segments__point-icon"
+                  aria-hidden="true">
+                <h3 class="segments__point-title">Интернет-продавцам</h3>
+              </div>
+              <p class="segments__point-text">Товарные остатки, упаковка, подготовка к&nbsp;отправке на&nbsp;маркетплейсы</p>
+            </div>
+            <div class="segments__point reveal">
+              <div class="segments__point-header">
+                <img src="assets/svg/icons/icon-success-circle.svg" alt="" class="segments__point-icon"
+                  aria-hidden="true">
+                <h3 class="segments__point-title">Розничным магазинам</h3>
+              </div>
+              <p class="segments__point-text">Сезонный товар, акционный резерв, витринные образцы</p>
+            </div>
+            <div class="segments__point reveal">
+              <div class="segments__point-header">
+                <img src="assets/svg/icons/icon-success-circle.svg" alt="" class="segments__point-icon"
+                  aria-hidden="true">
+                <h3 class="segments__point-title">Компаниям</h3>
+              </div>
+              <p class="segments__point-text">Архив документов, офисная мебель, оборудование</p>
+            </div>
+            <div class="segments__point reveal">
+              <div class="segments__point-header">
+                <img src="assets/svg/icons/icon-success-circle.svg" alt="" class="segments__point-icon"
+                  aria-hidden="true">
+                <h3 class="segments__point-title">Производителям и&nbsp;оптовикам</h3>
+              </div>
+              <p class="segments__point-text">Партионное хранение с&nbsp;точным количественным учётом</p>
+            </div>
+          </div>
+          <div class="segments__image">
+            <img src="assets/images/photo-client.jpg" alt="" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= ПОЧЕМУ БИЗНЕС ВЫБИРАЕТ АМБАР ======= -->
+    <section class="why-business section" id="why-business">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Почему бизнес выбирает Амбар</h2>
+        </div>
+        <div class="features">
+          <div class="feature reveal">
+            <div class="feature__icon">
+              <img src="assets/svg/icons/icon-success-circle-secondary.svg" alt="" width="28" height="28">
+            </div>
+            <h3 class="feature__title">Точный учёт</h3>
+            <p class="feature__text">Каждая позиция под&nbsp;своим ГРМ и&nbsp;артикулом, никаких расхождений в&nbsp;остатках</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon">
+              <img src="assets/svg/icons/icon-location.svg" alt="" width="28" height="28">
+            </div>
+            <h3 class="feature__title">Удалённое управление</h3>
+            <p class="feature__text">Формируйте заказы на&nbsp;отправку из&nbsp;любой точки мира</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon">
+              <img src="assets/svg/icons/icon-flexibility.svg" alt="" width="28" height="28">
+            </div>
+            <h3 class="feature__title">Готовность к&nbsp;продажам</h3>
+            <p class="feature__text">Прямой путь от&nbsp;хранения к&nbsp;каналам сбыта: Амбар Маркет и&nbsp;крупные
+              маркетплейсы</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon">
+              <img src="assets/svg/icons/icon-documents.svg" alt="" width="28" height="28">
+            </div>
+            <h3 class="feature__title">Официальные документы</h3>
+            <p class="feature__text">Договор и&nbsp;закрывающие документы на&nbsp;каждую отгрузку</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon">
+              <img src="assets/svg/icons/icon-repeat.svg" alt="" width="28" height="28">
+            </div>
+            <h3 class="feature__title">Гибкие объёмы</h3>
+            <p class="feature__text">От&nbsp;нескольких коробок до&nbsp;паллетных мест</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon">
+              <img src="assets/svg/icons/icon-security.svg" alt="" width="28" height="28">
+            </div>
+            <h3 class="feature__title">Конфиденциальность</h3>
+            <p class="feature__text">Коммерческая информация используется строго в&nbsp;рамках согласованных условий</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= GALLERY ======= -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="gallery__track-wrapper">
+          <div class="gallery__track" id="galleryTrack">
+            <div class="gallery__item">
+              <img src="assets/images/photo-sklad1.jpg" alt="Склад Амбар" loading="lazy">
+            </div>
+            <div class="gallery__item">
+              <img src="assets/images/photo-sklad2.jpg" alt="Склад Амбар" loading="lazy">
+            </div>
+            <div class="gallery__item">
+              <img src="assets/images/photo-sklad3.jpg" alt="Склад Амбар" loading="lazy">
+            </div>
+            <div class="gallery__item">
+              <img src="assets/images/photo-sklad4.jpg" alt="Склад Амбар" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="gallery__controls" id="galleryControls" aria-hidden="true">
+          <button class="gallery__btn" id="galleryPrev" aria-label="Предыдущее фото">
+            <img src="assets/svg/icons/icon-chevron-left.svg" alt="" width="20" height="20">
+          </button>
+          <div class="gallery__dots" id="galleryDots"></div>
+          <button class="gallery__btn" id="galleryNext" aria-label="Следующее фото">
+            <img src="assets/svg/icons/icon-chevron-right.svg" alt="" width="20" height="20">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= ТАРИФЫ ДЛЯ ЮРИДИЧЕСКИХ ЛИЦ ======= -->
+    <section class="pricing section" id="pricing">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Тарифы для&nbsp;юридических лиц</h2>
+        </div>
+        <div class="tariffs__table">
+          <div class="tariffs__head" aria-hidden="true">
+            <span class="tariffs__head-cell">Тарифы</span>
+            <span class="tariffs__head-cell tariffs__head-cell--center">Объём</span>
+            <span class="tariffs__head-cell tariffs__head-cell--price">Стоимость</span>
+          </div>
+          <div class="tariffs__row reveal">
+            <span class="tariffs__name">Тариф 1</span>
+            <span class="tariffs__volume">до&nbsp;6 м³</span>
+            <span class="tariffs__price">1&nbsp;594 ₽/мес.</span>
+          </div>
+          <div class="tariffs__row reveal">
+            <span class="tariffs__name">Тариф 2</span>
+            <span class="tariffs__volume">до&nbsp;20 м³</span>
+            <span class="tariffs__price">1&nbsp;487,3 ₽/мес.</span>
+          </div>
+          <div class="tariffs__row tariffs__row--featured reveal">
+            <div class="tariffs__badge">
+              <img src="assets/svg/icons/icon-like.svg" alt="" width="16" height="16" aria-hidden="true">
+            </div>
+            <span class="tariffs__name">Тариф 3</span>
+            <span class="tariffs__volume">до&nbsp;50 м³</span>
+            <span class="tariffs__price">1&nbsp;380,3 ₽/мес.</span>
+          </div>
+          <div class="tariffs__row reveal">
+            <span class="tariffs__name">Тариф 4</span>
+            <span class="tariffs__volume">до&nbsp;100 м³</span>
+            <span class="tariffs__price">1&nbsp;273,3 ₽/мес.</span>
+          </div>
+          <div class="tariffs__row reveal">
+            <span class="tariffs__name">Тариф 5</span>
+            <span class="tariffs__volume">свыше 100 м³</span>
+            <span class="tariffs__price">1&nbsp;166,3 ₽/мес.</span>
+          </div>
+        </div>
+        <p class="tariffs__note">Точная стоимость рассчитывается индивидуально по&nbsp;вашему объёму и&nbsp;задачам</p>
+        <div class="section__cta">
+          <button class="btn btn--primary" id="openConsultPricing">Рассчитать стоимость для&nbsp;бизнеса</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= FAQ ======= -->
+    <section class="faq section" id="faq">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Частые вопросы бизнеса</h2>
+        </div>
+        <div class="faq__list">
+
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              Как&nbsp;присваивается ГРМ товару при&nbsp;поступлении на&nbsp;склад?
+              <span class="faq__icon" aria-hidden="true">
+                <img src="assets/svg/icons/icon-plus.svg" class="faq__icon-plus" alt="" width="20" height="20">
+                <img src="assets/svg/icons/icon-cross.svg" class="faq__icon-cross" alt="" width="20" height="20">
+              </span>
+            </button>
+            <div class="faq__answer">
+              <p>При&nbsp;поступлении груза мы замеряем габариты и&nbsp;вес каждой позиции, после чего присваиваем
+                уникальный код ГРМ, который фиксирует параметры товара и&nbsp;его место на&nbsp;складе</p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              Можно ли&nbsp;привязать свой артикул к&nbsp;товару на&nbsp;складе?
+              <span class="faq__icon" aria-hidden="true">
+                <img src="assets/svg/icons/icon-plus.svg" class="faq__icon-plus" alt="" width="20" height="20">
+                <img src="assets/svg/icons/icon-cross.svg" class="faq__icon-cross" alt="" width="20" height="20">
+              </span>
+            </button>
+            <div class="faq__answer">
+              <p>Да, при&nbsp;необходимости к&nbsp;товару привязывается ваш собственный артикул, который используется
+                в&nbsp;вашей системе учёта и&nbsp;продаж</p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              Как&nbsp;сформировать заказ на&nbsp;отправку клиенту удалённо?
+              <span class="faq__icon" aria-hidden="true">
+                <img src="assets/svg/icons/icon-plus.svg" class="faq__icon-plus" alt="" width="20" height="20">
+                <img src="assets/svg/icons/icon-cross.svg" class="faq__icon-cross" alt="" width="20" height="20">
+              </span>
+            </button>
+            <div class="faq__answer">
+              <p>В&nbsp;личном кабинете вы выбираете одну или&nbsp;несколько карточек товара, собираете из&nbsp;них заказ
+                и&nbsp;отправляете заявку на&nbsp;склад — мы подбираем нужное количество товара по&nbsp;указанным ГРМ или&nbsp;артикулам</p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              Можно ли&nbsp;собрать один заказ из&nbsp;нескольких карточек товара?
+              <span class="faq__icon" aria-hidden="true">
+                <img src="assets/svg/icons/icon-plus.svg" class="faq__icon-plus" alt="" width="20" height="20">
+                <img src="assets/svg/icons/icon-cross.svg" class="faq__icon-cross" alt="" width="20" height="20">
+              </span>
+            </button>
+            <div class="faq__answer">
+              <p>Да, вы можете выбрать одну или&nbsp;несколько карточек товара для&nbsp;формирования заказа и&nbsp;собрать
+                из&nbsp;нескольких позиций один заказ на&nbsp;отправку</p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              Как&nbsp;происходит отгрузка на&nbsp;маркетплейсы по&nbsp;схеме FBO?
+              <span class="faq__icon" aria-hidden="true">
+                <img src="assets/svg/icons/icon-plus.svg" class="faq__icon-plus" alt="" width="20" height="20">
+                <img src="assets/svg/icons/icon-cross.svg" class="faq__icon-cross" alt="" width="20" height="20">
+              </span>
+            </button>
+            <div class="faq__answer">
+              <p>Мы собираем грузы по&nbsp;вашим карточкам товара и&nbsp;формируем поставки для&nbsp;крупных маркетплейсов
+                по&nbsp;схеме FBO — из&nbsp;тех же&nbsp;карточек, без&nbsp;дублирования учёта</p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              Можно ли&nbsp;продавать товар через&nbsp;Амбар Маркет прямо со&nbsp;склада?
+              <span class="faq__icon" aria-hidden="true">
+                <img src="assets/svg/icons/icon-plus.svg" class="faq__icon-plus" alt="" width="20" height="20">
+                <img src="assets/svg/icons/icon-cross.svg" class="faq__icon-cross" alt="" width="20" height="20">
+              </span>
+            </button>
+            <div class="faq__answer">
+              <p>Да, вы можете реализовать товар через&nbsp;собственный маркетплейс Амбара, без&nbsp;необходимости
+                организовывать отдельную логистику продаж</p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              Как&nbsp;ведётся учёт остатков в&nbsp;личном кабинете?
+              <span class="faq__icon" aria-hidden="true">
+                <img src="assets/svg/icons/icon-plus.svg" class="faq__icon-plus" alt="" width="20" height="20">
+                <img src="assets/svg/icons/icon-cross.svg" class="faq__icon-cross" alt="" width="20" height="20">
+              </span>
+            </button>
+            <div class="faq__answer">
+              <p>Вы видите карточки товаров с&nbsp;остатками в&nbsp;штуках по&nbsp;каждому ГРМ и&nbsp;артикулу и&nbsp;отслеживаете,
+                сколько единиц товара хранится на&nbsp;складе прямо сейчас</p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              Какой минимальный объём хранения для&nbsp;юридических лиц?
+              <span class="faq__icon" aria-hidden="true">
+                <img src="assets/svg/icons/icon-plus.svg" class="faq__icon-plus" alt="" width="20" height="20">
+                <img src="assets/svg/icons/icon-cross.svg" class="faq__icon-cross" alt="" width="20" height="20">
+              </span>
+            </button>
+            <div class="faq__answer">
+              <p>От&nbsp;нескольких коробок до&nbsp;паллетных мест — объём подбирается под&nbsp;ваши задачи. Точную
+                стоимость рассчитает менеджер по&nbsp;вашей заявке</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= ФИНАЛЬНЫЙ CTA ======= -->
+    <section class="final-cta final-cta--centered" id="cta">
+      <div class="container final-cta__inner final-cta__inner--centered">
+        <div class="final-cta__content">
+          <h2 class="final-cta__title">Готовы освободить пространство и&nbsp;начать продавать товар онлайн?</h2>
+          <p class="final-cta__subtitle">Оставьте заявку — привезём, замерим, присвоим ГРМ и&nbsp;создадим карточки
+            товара с&nbsp;остатками в&nbsp;личном кабинете</p>
+          <div class="final-cta__actions">
+            <button class="btn btn--white btn--lg" id="openConsultFinal">Оставить заявку для&nbsp;бизнеса</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= CONTACTS ======= -->
+    <section class="contacts section" id="contacts">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Контакты</h2>
+          <p class="section__subtitle">Звоните круглосуточно — мы всегда на&nbsp;связи</p>
+        </div>
+        <div class="contacts__inner">
+          <div class="contacts__info">
+            <a href="tel:+74994606716" class="contact-item">
+              <div class="contact-item__icon">
+                <img src="assets/svg/icons/icon-phone.svg" alt="" width="24" height="24">
+              </div>
+              <div class="contact-item__text">
+                <span class="contact-item__value">+7 (499) 460-67-16</span>
+                <span class="contact-item__label">Звонки принимаются круглосуточно</span>
+              </div>
+            </a>
+            <a href="mailto:info@ambar-sklad.ru" class="contact-item">
+              <div class="contact-item__icon">
+                <img src="assets/svg/icons/icon-mail.svg" alt="" width="24" height="24">
+              </div>
+              <div class="contact-item__text">
+                <span class="contact-item__value">info@ambar-sklad.ru</span>
+                <span class="contact-item__label">Электронная почта</span>
+              </div>
+            </a>
+            <div class="contact-item">
+              <div class="contact-item__icon">
+                <img src="assets/svg/icons/icon-messengers.svg" alt="" width="24" height="24">
+              </div>
+              <div class="contact-item__text">
+                <span class="contact-item__value">Telegram, Max</span>
+                <span class="contact-item__label">Ссылки появятся скоро</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon">
+                <img src="assets/svg/icons/icon-location.svg" alt="" width="24" height="24">
+              </div>
+              <div class="contact-item__text">
+                <span class="contact-item__value">г. Москва, г. Троицк, ул. Промышленная, 15</span>
+                <span class="contact-item__label">Адрес склада</span>
+              </div>
+            </div>
+          </div>
+          <div class="contacts__map">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?org=238315983780&ll=37.266663,55.459257&z=16&lang=ru_RU&pt=37.266663,55.459257,pm2rdm"
+              width="100%" height="380" frameborder="0" allowfullscreen title="Амбар на карте" loading="lazy">
+            </iframe>
+            <a href="https://yandex.ru/maps/org/ambar/238315983780/" target="_blank" rel="noopener"
+              class="contacts__map-link">
+              <img src="assets/svg/icons/icon-location.svg" alt="" width="16" height="16" aria-hidden="true">
+              Посмотреть на&nbsp;Яндекс.Картах
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="footer__logo">
+          <img src="assets/svg/logo/logo-white.svg" alt="Амбар" height="36">
+        </a>
+        <p class="footer__tagline">Складское хранение и&nbsp;учёт товаров для&nbsp;бизнеса</p>
+      </div>
+      <div class="footer__links">
+        <h4>Услуги</h4>
+        <a href="#process">Как&nbsp;это&nbsp;работает</a>
+        <a href="#sales">От&nbsp;хранения к&nbsp;продажам</a>
+        <a href="#pricing">Тарифы</a>
+      </div>
+      <div class="footer__links">
+        <h4>Помощь</h4>
+        <a href="#faq">FAQ</a>
+        <a href="https://newlk.ambar-sklad.ru/login" target="_blank" rel="noopener">Личный кабинет</a>
+        <a href="https://ambar-sklad.ru/privacy-policy/" target="_blank" rel="noopener">Политика конфиденциальности</a>
+      </div>
+      <div class="footer__contact">
+        <h4>Контакты</h4>
+        <a href="tel:+74994606716">+7 (499) 460-67-16</a>
+        <p>Круглосуточно</p>
+        <a href="mailto:info@ambar-sklad.ru">info@ambar-sklad.ru</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2026 ООО «Амбар». Все&nbsp;права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-wrap" id="toastWrap" aria-live="polite" aria-atomic="true"></div>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+    <img src="assets/svg/icons/icon-arrow-up.svg" alt="" width="32" height="32">
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
