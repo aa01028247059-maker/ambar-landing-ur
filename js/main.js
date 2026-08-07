@@ -152,7 +152,7 @@ function initModal() {
 
   _closeModal = closeModal;
 
-  ['openConsultHeader', 'openConsultHeaderMobile', 'openConsultHero', 'openConsultPricing', 'openConsultFinal'].forEach(id => {
+  ['openConsultHero', 'openConsultPricing', 'openConsultFinal'].forEach(id => {
     document.getElementById(id)?.addEventListener('click', function () {
       openModal(this);
     });
