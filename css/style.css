@@ -1605,6 +1605,10 @@ a.contact-item:hover {
     font: var(--font-btn-small);
   }
 
+  .header__nav .header__nav-cta {
+    color: var(--color-white);
+  }
+
   .header__burger {
     display: flex;
   }
@@ -1614,11 +1618,15 @@ a.contact-item:hover {
     display: none;
   }
 
+  .hero__subtitle {
+    margin-bottom: 32px;
+  }
+
   .hero__visual--inline {
     display: block;
     width: 100%;
     height: auto;
-    margin: 20px 0;
+    margin: 32px 0;
   }
 
   .hero__actions {
@@ -1644,6 +1652,10 @@ a.contact-item:hover {
   }
 
   /* Pain */
+  .pain__header {
+    margin-bottom: 32px;
+  }
+
   .pain__photo {
     width: 100%;
     height: auto;
