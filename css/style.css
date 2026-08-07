@@ -1614,6 +1614,10 @@ a.contact-item:hover {
   }
 
   /* Hero */
+  .hero {
+    padding-bottom: 96px;
+  }
+
   .hero__visual {
     display: none;
   }
@@ -1667,10 +1671,14 @@ a.contact-item:hover {
     width: 100%;
   }
 
+  .pain__list {
+    gap: 8px;
+  }
+
   /* Process */
   .process__grid {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 8px;
   }
 
   /* Features */
@@ -1680,16 +1688,42 @@ a.contact-item:hover {
     gap: 8px;
   }
 
+  /* Sales */
+  .section__note--gap-lg {
+    margin-top: 32px;
+  }
+
   /* Segments */
+  .section__header--left {
+    text-align: center;
+  }
+
+  .segments {
+    padding-top: 96px;
+    padding-bottom: 0;
+  }
+
   .segments__inner {
     flex-direction: column;
   }
 
   .segments__list {
     width: 100%;
+    gap: 8px;
+  }
+
+  /* Why business */
+  .why-business {
+    padding-top: 96px;
+    padding-bottom: 0;
   }
 
   /* Gallery */
+  .gallery {
+    padding-top: 96px;
+    padding-bottom: 0;
+  }
+
   .gallery__track {
     display: flex;
     gap: 8px;
@@ -1734,14 +1768,43 @@ a.contact-item:hover {
     transform: scale(1.3);
   }
 
+  /* Pricing */
+  .pricing {
+    padding-top: 96px;
+    padding-bottom: 0;
+  }
+
   /* Tariffs */
+  .tariffs__table {
+    gap: 8px;
+  }
+
   .tariffs__head,
   .tariffs__row {
     padding-left: 16px;
     padding-right: 16px;
   }
 
+  .section__cta {
+    margin-top: 48px;
+  }
+
+  /* FAQ */
+  .faq {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .faq__list {
+    gap: 8px;
+  }
+
   /* LK Promo */
+  .lk-promo {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
   .lk-promo__inner {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -1774,11 +1837,16 @@ a.contact-item:hover {
 
   .lk-promo__content .btn {
     align-self: center;
+    margin-top: 48px;
   }
 
   /* Final CTA */
   .final-cta__content {
     text-align: center;
+  }
+
+  .final-cta__subtitle {
+    margin-bottom: 48px;
   }
 
   /* Contacts */
